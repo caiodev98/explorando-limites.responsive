@@ -1,0 +1,205 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  font-size: 6.25%;
+
+  --bg-color: #F9F4FB;
+  --h1-color:  #B52184;
+  --text-color: #312D64;
+  --bg-main-color: linear-gradient(to right, #312D64, #513193);
+  --fm-mulish: 'Mulish', sans-serif;
+}
+
+.page{
+  width: 430rem;
+  margin: 0 auto;
+
+  text-align: center;
+
+  font-family: var(--fm-mulish);
+}
+
+.page header {
+  background-color: var(--bg-color);
+}
+
+ h1, legend{
+  font-size: 32rem;
+  font-weight: 900;
+
+  color: var(--h1-color);
+
+  margin-bottom: 5rem;
+}
+
+p{
+  font-size: 20rem;
+  font-weight: 600;
+
+  color: var(--text-color);
+
+  margin-bottom: 35rem;
+}
+
+.arrow{
+  margin-bottom:93rem ;
+}
+
+main{
+  background-color: #513193;
+  display: grid;
+ 
+}
+
+.block-infos{
+  background-color: #FFFFFF;
+
+  text-align: left;
+
+  padding: 26rem;
+  border-radius: 20rem;
+  margin-top: 53rem;
+  margin-left: 30rem;
+  margin-right: 30rem;
+}
+
+.a{
+  margin-bottom: 53rem;
+}
+
+.block-infos img{
+  margin-bottom: 33rem;
+}
+
+.formulario{
+  background-color: #F9F4FB;
+}
+
+form fieldset{
+  border: none;
+}
+
+
+
+.formulario form{
+  padding: 80rem 40rem;
+
+  text-align: left;
+}
+
+fieldset legend{
+  margin-bottom: 50rem;
+}
+
+fieldset input, textarea{ 
+  border-radius: 16rem;
+  border: 1px solid #312D64;
+
+  padding: 16rem 50rem;
+  margin-bottom: 25rem;
+
+  width: 100%;
+  
+}
+
+
+
+.name{ /* Definindo a imagem do input tipo text */
+  background-image: url(Imagens/person.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 24rem;
+}
+
+.email{ /* Definindo o fundo do input tipo email */
+  background-image: url(Imagens/at.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 24rem;
+}
+
+button{ /* Propriedades do botão */
+  padding: 16rem 20rem;
+
+  background-color: #353297;
+  color: white;
+
+  border-radius: 16rem;
+  border: none;
+
+  font-family: var(--fm-mulish);
+  font-weight: bold;
+}
+
+button:hover{
+  background-color: #1c1975;
+
+  cursor: pointer;
+}
+
+.star-img{ /* Deixando a imagem sem aparecer quando for mobile */
+  display: none;
+}
+
+footer p{ /* Como utilizar cor degradê */ /* Como mudar a cor do texto do placeholder? */ /* Como fazer o input dar zoom ao passar o mouse */
+  background-color: #353297;
+  color: white;
+
+  padding: 32rem 16rem;
+}
+ 
+@media screen and (min-width: 800px) {
+  .page{
+    min-width: 1440rem;
+  }
+
+  header{
+    width: 100%;
+    display: grid;
+     grid-template-columns: 1fr 1fr;
+    align-items: center; 
+    grid-template-areas: 'left right';
+    gap: 200rem;
+  }
+
+
+ 
+  
+
+  .img-header{
+    grid-area: right;
+  }
+
+   .text-desktop{
+    grid-area: left;
+  }
+
+  main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+
+
+  .block-infos{
+    margin-bottom: 53rem;
+  }
+
+  .star-img{
+    display: inline;
+    width: 100%;
+  }
+
+  .formulario{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   /*  justify-content: space-between;
+    gap: 92rem; 
+    display: flex;*/
+    align-items: center;
+  }
+}
